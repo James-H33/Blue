@@ -27,20 +27,39 @@ $('.menu-btn').on('click', function() {
 
 });
 
+$(window).on('scroll', function() {
+  var scrollCheck = $('body').scrollTop();
+  var numbersTop = $('.numbers-wrapper').offset().top - ($(window).height() * 3/4);
+
+  if(scrollCheck >= numbersTop) {
+    getBrands();
+  }
+})
+
+
+
 //**********************************************************
 //                     Functions
 //**********************************************************
 
-function getBrands() {
+var getBrands = (function() {
   var brands = $('.numbers-display li h4');
+  var executed = false;
 
-  for (var i = 0; i < brands.length; i++) {
-    var b = brands[i];
-    var bNum = brand[i].num;
-    
-    brandsCounter(bNum, b);
+  return function() {
+    if (!executed) {
+      executed = true;
+
+      for (var i = 0; i < brands.length; i++) {
+        var b = brands[i];
+        var bNum = brand[i].num;
+
+        brandsCounter(bNum, b);
+      }
+    }
   }
-}
+})();
+
 
 function brandsCounter(bNum, b) {
   var n = bNum;
@@ -52,6 +71,3 @@ function brandsCounter(bNum, b) {
   }, 10 * i);
  }
 }
-
-brandsCounter();
-getBrands();
