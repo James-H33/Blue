@@ -1,6 +1,7 @@
 .index-slider-wrapper
   width: 100%
-  height: 90vh
+  height: 100vh
+  padding-top: 60px
 
 .index-slider-display
   width: 100%
@@ -14,14 +15,147 @@
   li
     width: 100%
     height: 100%
-    background:
-      size: cover
-      repeat: no-repeat
+    opacity: 0
     text-align: center
     display: table
     position: absolute
 
+    &.active-slide
+      opacity: 1
+
     p
+      color: $off-white
       font-size: 50px
       display: table-cell
       vertical-align: middle
+
+
+
+.info-wrapper
+  width: 100%
+  height: auto
+
+.info-display
+  width: 90%
+  height: 100%
+  max-width: 1220px
+  margin: 0 auto
+  text-align: center
+  padding: 40px 0 30px 0
+
+  ul
+    list-style: none
+
+  li
+    width: 33%
+    display: inline-block
+
+  h4
+    font-size: 38px
+    margin: 15px 0
+
+    &:nth-of-type(1)
+      color: $iblue
+    &:nth-of-type(2)
+      color: $tblue
+
+  p
+    color: $gray
+    line-height: 30px
+    letter-spacing: 1px
+
+@media(min-width: 769px)
+
+  .info-display
+    padding: 50px 0 30px 0
+    h4
+      display: inline-block
+
+
+
+.branding-wrapper
+  width: 100%
+  height: auto
+
+.branding-display
+  width: 90%
+  height: 100%
+  max-width: 1220px
+  margin: 0 auto
+  text-align: center
+  padding: 30px 0 30px 0
+
+  ul
+    width: 100%
+    list-style: none
+
+  li
+    width: 100%
+    text-align: center
+    margin: 25px 0
+
+  h4
+    color: $tblue
+    font-size: 25px
+    font-weight: normal
+    margin: 20px 0
+
+  p
+    color: $gray
+    line-height: 30px
+    letter-spacing: 1px
+
+@media(min-width: 769px)
+
+  .branding-display
+    li
+      width: 30%
+      display: inline-block
+      vertical-align: top
+
+
+
+.numbers-wrapper
+  width: 100%
+  height: auto
+  background:
+    image: url('https://images.unsplash.com/photo-1454897834822-1ece264a5d89?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=3a5615c0bc77123ece2a2663e2640341')
+    position: 50% 50%
+    repeat: no-repeat
+    size: cover
+    attachment: fixed
+
+.numbers-display
+  width: 90%
+  height: 100%
+  max-width: 1220px
+  margin: 0 auto
+  text-align: center
+  padding: 30px 0 30px 0
+
+  ul
+    width: 100%
+    list-style: none
+
+  li
+    width: 100%
+    display: block
+    padding: 30px 0
+  h4
+    color: $off-white
+    font-size: 70px
+    letter-spacing: 2px
+    font-weight: normal
+  h5
+    color: $off-white
+    font-size: 30px
+    font-weight: 300
+    letter-spacing: 1px
+
+@media(min-width: 769px)
+
+  .numbers-display
+
+    li
+      width: 22%
+      display: inline-block
