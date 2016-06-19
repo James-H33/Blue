@@ -50,22 +50,78 @@
   <div class="numbers-display">
     <ul>
       <li>
-        <h4>68</h4>
+        <h4>0</h4>
         <h5>BRANDS</h5>
       </li>
       <li>
-        <h4>1501</h4>
+        <h4>0</h4>
         <h5>VIDEOS</h5>
       </li>
       <li>
-        <h4>712</h4>
+        <h4>0</h4>
         <h5>TARABYTES</h5>
       </li>
       <li>
-        <h4>1</h4>
+        <h4>0</h4>
         <h5>PASSION</h5>
       </li>
     </ul>
+  </div>
+</section>
+
+<section class="services-wrapper">
+  <div class="services-display">
+    <ul>
+      <li>
+        <h4>Campaign Management</h4>
+        <p>We are experts at management and oversight of your campaign from concept to air. We listen. We immerse ourselves. We communicate one to one. We slow down and take the time. The result is our ability to get it done right the first time out.</p>
+      </li>
+      <li>
+        <h4>Creative Services</h4>
+        <p>It is absolutely essential to establish your brand quickly to arrest the viewer’s attention. We do this by capturing and elevating the essence of your company’s brand integrity by communicating that with a compelling creative to move the viewer along the trust and transactional path.</p>
+      </li>
+      <li>
+        <h4>Production to Post</h4>
+        <p>We have fully integrated production and post-production services. Featuring full HD digital acquisition, we were the first, end-to-end, fully digital production studio in Florida, and are experts at leveraging a digital workflow to deliver final projects quickly. From simple field shoots to multi-cam productions, we do it right… and right on time.</p>
+      </li>
+      <li>
+        <h4>Media Buying</h4>
+        <p>As a result of planning and buying all major networks over the past 15 years, we possess the relationships, the real world experience and the aggressiveness needed to place your commercial in the right media at the right time with the best ROI.</p>
+      </li>
+      <li>
+        <h4>Digital Services</h4>
+        <p>We offer professional services within the core service areas of web design, e-commerce, Internet marketing, graphics, animations, package design and brand identity. From small start-up websites to multi-million dollar interactive campaigns, our team consistently pushes the boundaries.</p>
+      </li>
+      <li>
+        <h4>Internet Marketing</h4>
+        <p>While Internet Marketing may be very broad in scope, we have a comprehensive yet streamlined process for guaranteeing that your company is always marketing and selling on your behalf, especially when you can’t be in front of potential clients or customers yourself.</p>
+      </li>
+      <li>
+        <h4>Music Recording</h4>
+        <p>Castaway Studios is a turnkey show creation and music production facility. Our award winning staff with over 100 years experiences and state of the art gear have placed us as one of the top recording studios in the Eastern United States.</p>
+      </li>
+      <li>
+        <h4>Talent Booking</h4>
+        <p>Talent Pool represents talent of all ages for print, commercials, film/TV and voiceovers. We are a full service agency that has the capabilities to put talent on tape for out of state clients and projects. Our goal is to help actors achieve their goals and dreams of success in feature films, broadcast, radio, photography, and other media.</p>
+      </li>
+      <li>
+        <h4>Studio Rental</h4>
+        <p>Our state of the art studio facility features the largest floor space in the Tampa Bay area. Full set design and multi-camera production capabilities are integrated with our recoding sound stage. Our second studio features a fully integrated home set with dining room, kitchen, family and outdoor areas. You can be lit and shooting in a beautifully decorated home within 5 seconds!</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="clients-wrapper">
+  <div class="clients-display">
+    <ul>
+      <% Imgs.forEach(function(image) { %>
+        <li>
+          <img src="<%= image.imgs %>" />
+        </li>
+      <% }) %>
+    </ul>
+    <div class="clear"></div>
   </div>
 </section>
 
