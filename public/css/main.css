@@ -30,21 +30,21 @@ body {
   cursor: pointer;
   z-index: 1000; }
   .menu-btn span {
-    width: 22px;
-    height: 3px;
+    width: 24px;
+    height: 4px;
     background: #3f729b;
     position: absolute;
-    left: 3px;
+    left: 2px;
     -webkit-transition: all 0.35s linear;
     transition: all 0.35s linear; }
     .menu-btn span:nth-of-type(1) {
-      top: 3px;
+      top: 1px;
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg); }
     .menu-btn span:nth-of-type(2) {
       top: 9px; }
     .menu-btn span:nth-of-type(3) {
-      top: 15px;
+      top: 17px;
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg); }
     .menu-btn span:nth-of-type(1).active-menu {
@@ -125,6 +125,67 @@ body {
     .header-links li {
       display: inline-block;
       margin-left: 20px; } }
+
+.footer-wrapper {
+  width: 100%;
+  height: 100%; }
+
+.footer-display {
+  width: 100%;
+  height: 100%; }
+
+.banner-img {
+  width: 100%;
+  height: 320px;
+  background-image: url("http://www.bluewatermedia.tv/wp-content/uploads/2014/09/Contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 50%; }
+
+.banner-text {
+  width: 100%;
+  height: auto;
+  background: #f5f5f5;
+  padding: 20px 0;
+  text-align: center; }
+  .banner-text h5 {
+    color: #34465d;
+    font-size: 25px;
+    margin: 0 10px; }
+
+.contact-wrapper {
+  width: 100%;
+  height: 100%; }
+
+.contact-display {
+  width: 100%;
+  height: 90%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 80px 0; }
+
+.contact-info {
+  display: inline-block;
+  vertical-align: top; }
+  .contact-info ul {
+    list-style: none; }
+
+#map {
+  width: 60%;
+  height: 300px;
+  margin-left: 50px;
+  display: inline-block; }
+
+.footer {
+  width: 100%;
+  height: 180px;
+  background: #34465d;
+  display: table;
+  text-align: center; }
+  .footer h4 {
+    color: #f5f5f5;
+    display: table-cell;
+    vertical-align: middle; }
 
 .index-slider-wrapper {
   width: 100%;
@@ -301,9 +362,8 @@ body {
   background: #f5f5f5; }
 
 .clients-display {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  max-width: 1220px;
   margin: 0 auto;
   text-align: center;
   padding: 30px 0 30px 0; }

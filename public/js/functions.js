@@ -2,20 +2,7 @@
 //                Javascript || JQuery
 //**********************************************************
 
-var brand = [
-  {
-    num: 68,
-  },
-  {
-    num: 1501,
-  },
-  {
-    num: 712,
-  },
-  {
-    num: 1,
-  },
-]
+
 //**********************************************************
 //                Event listeners
 //**********************************************************
@@ -71,3 +58,42 @@ function brandsCounter(bNum, b) {
   }, 10 * i);
  }
 }
+
+
+function initMap() {
+  var myLatLng = {lat: 27.497638, lng: -82.574891};
+  // Create a map object and specify the DOM element for display.
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    scrollwheel: false,
+    zoom: 12
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Bradenton'
+  });
+}
+
+//**********************************************************
+//                    Data
+//**********************************************************
+
+
+
+var brand = [
+  {
+    num: 68,
+  },
+  {
+    num: 1501,
+  },
+  {
+    num: 712,
+  },
+  {
+    num: 1,
+  },
+]
