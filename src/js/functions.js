@@ -7,12 +7,7 @@
 //                Event listeners
 //**********************************************************
 
-$('.menu-btn').on('click', function() {
-  $('.menu-btn span').toggleClass('active-menu');
-  $('.header-links ul').toggleClass('active-menu');
-  $('.header-links li').toggleClass('active-menu');
-
-});
+$('.menu-btn').on('click', menuActions);
 
 $(window).on('scroll', function() {
   var scrollCheck = $('body').scrollTop();
@@ -21,7 +16,26 @@ $(window).on('scroll', function() {
   if(scrollCheck >= numbersTop) {
     getBrands();
   }
+
+  function scrollImage(image) {
+    var y = 0;
+    y = scrollCheck - (image.offset().top + 200);
+    image.css({
+      'background-position' : '50% ' + (-y * 1/3) +'px'
+    })
+  }
+  scrollImage($('.numbers-wrapper'));
+
 })
+
+
+
+//**********************************************************
+//                    Call Functions
+//**********************************************************
+
+scrollDestination('#services', '.services-wrapper');
+scrollDestination('#clients', '.clients-wrapper');
 
 
 
@@ -58,6 +72,45 @@ function brandsCounter(bNum, b) {
   }, 10 * i);
  }
 }
+
+(function slideChange() {
+  var slides = $('.slider-container li');
+  var s = 0;
+
+  for (var i = 0; i < slides.length; i++) {
+    (function(x) {
+      setTimeout(function() {
+        slides[x].classList.value = 'active-slide';
+      }, 5000 * i);
+    })(i);
+  }
+})();
+
+function scrollDestination(dest, loc) {
+  $(dest).on('click', function() {
+    $('html, body').animate({
+      scrollTop: $(loc).offset().top
+    }, 2000);
+
+  if (window.innerWidth < 1000)
+    setTimeout(function() {
+      menuActions();
+    }, 200)
+  })
+}
+
+function menuActions() {
+  $('.menu-btn span').toggleClass('active-menu');
+  $('.header-links ul').toggleClass('active-menu');
+  $('.header-links li').toggleClass('active-menu');
+}
+
+
+
+
+//**********************************************************
+//                    Google Maps Functions
+//**********************************************************
 
 
 function initMap() {

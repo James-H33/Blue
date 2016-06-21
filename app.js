@@ -32,6 +32,10 @@ app.get('/', function(req, res) {
   })
 })
 
+app.get('/team', function(req, res) {
+  res.render('team')
+})
+
 app.listen(port, portIP, function() {
   console.log('Server has started and is listening on port ' + port);
 })
