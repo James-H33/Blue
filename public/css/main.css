@@ -301,6 +301,9 @@ body {
     font-size: 25px;
     font-weight: normal;
     margin: 20px 0; }
+  .branding-display i {
+    color: #34465d;
+    font-size: 30px; }
   .branding-display p {
     color: rgba(50, 50, 50, 0.7);
     line-height: 30px;
@@ -427,3 +430,40 @@ body {
 
 .clear {
   clear: both; }
+
+.team-wrapper {
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 80px; }
+
+.team-display {
+  width: 100%;
+  height: 100%;
+  max-width: 1220px;
+  margin: 0 auto; }
+  .team-display ul {
+    list-style: none;
+    padding-top: 30px; }
+  .team-display li {
+    width: 100%;
+    float: left;
+    text-align: center; }
+    .team-display li h3 {
+      color: rgba(50, 50, 50, 0.7);
+      font-size: 16px;
+      font-weight: normal;
+      margin: 5px 0; }
+  .team-display figure {
+    width: 65%;
+    margin: 0 auto; }
+    .team-display figure img {
+      width: 100%; }
+
+@media (min-width: 500px) {
+  .team-display li {
+    width: 33.33%; } }
+
+@media (min-width: 1000px) {
+  .team-display li {
+    width: 25%; } }

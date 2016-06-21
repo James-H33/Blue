@@ -6,6 +6,7 @@ var Seed          = require('./seed');
 
 // Models
 var Clients = require('./models/clientsModel');
+var Team    = require('./models/teamModel');
 
 // Ports
 var port = process.env.PORT || 8080;
@@ -33,7 +34,13 @@ app.get('/', function(req, res) {
 })
 
 app.get('/team', function(req, res) {
-  res.render('team')
+  Team.find({}, function(err, member) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('team', {Member: member}); 
+    }
+  })
 })
 
 app.listen(port, portIP, function() {
