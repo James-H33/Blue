@@ -1,5 +1,20 @@
 <% include ./partials/header %>
 
-
+<section class="team-wrapper">
+  <div class="team-display">
+    <ul>
+      <% Member.forEach(function(members) { %>
+        <li>
+          <figure>
+            <img src="<%= members.img %>">
+          </figure>
+          <h3><%= members.name %></h3>
+          <h3><%= members.position %></h3>
+        </li>
+      <% }) %>
+      <div class="clear"></div>
+    </ul>
+  </div>
+</section>
 
 <% include ./partials/footer %>

@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Clients  = require('./models/clientsModel');
+var Team     = require('./models/teamModel');
 
 var data = [
   {imgs: 'http://www.bluewatermedia.tv/wp-content/uploads/2014/09/bws_logos_74.png'},
@@ -13,7 +14,22 @@ var data = [
   {imgs: 'http://www.bluewatermedia.tv/wp-content/uploads/2014/09/bws_logos_70.png'},
 ]
 
-function seed() {
+var data2 = [
+  { name: 'Guillermo Hayes',  position: 'CEO',                                 img: '/imgs/avatar_01.jpg', },
+  { name: 'Daryl	Garrett',   position: 'Principal | Rainmaker',               img: '/imgs/avatar_02.jpg', },
+  { name: 'Gerardo	Barton',  position: 'President | Bluewater Studios',       img: '/imgs/avatar_03.jpg', },
+  { name: 'Cristina	Bowen',   position: 'Partner | Director Post Production',  img: '/imgs/avatar_04.jpg', },
+  { name: 'Danny	Griffin',   position: 'Creative Director',                   img: '/imgs/avatar_05.jpg', },
+  { name: 'Gilbert	Carson',  position: 'Director of Accounts',                img: '/imgs/avatar_06.jpg', },
+  { name: 'Rich Domergu',     position: 'Producer | Director',                 img: '/imgs/avatar_07.jpg', },
+  { name: 'Morris James',     position: 'Producer | Editor',                   img: '/imgs/avatar_08.jpg', },
+  { name: 'Tommie	Robinson',  position: 'Senior Editor',                       img: '/imgs/avatar_09.jpg', },
+  { name: 'Mary Rosell',      position: 'Media Director',                      img: '/imgs/avatar_10.jpg', },
+  { name: 'Fannie	Bryan',     position: 'Web Developer',                       img: '/imgs/avatar_11.jpg', },
+  { name: 'Danny	Griffin',   position: 'Back End Developer',                  img: '/imgs/avatar_12.jpg', },
+]
+
+function serve() {
   Clients.remove({}, function(err) {
     if (err) {
       console.log(err);
@@ -31,6 +47,33 @@ function seed() {
       })
     }
   })
+}
+
+function createTeam() {
+  Team.remove({}, function(err) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('Deleted..');
+      data2.forEach(function(member) {
+        Team.create(member, function(err, madeMember) {
+          if(err) {
+            console.log(err);
+          } else {
+            madeMember.save();
+            console.log("Member was made..");
+          }
+        })
+      })
+    }
+  })
+}
+
+
+
+function seed() {
+  serve();
+  createTeam();
 }
 
 module.exports = seed;
