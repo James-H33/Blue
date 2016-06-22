@@ -18,7 +18,7 @@ var data2 = [
   { name: 'Guillermo Hayes',  position: 'CEO',                                 img: '/imgs/avatar_01.jpg', },
   { name: 'Daryl	Garrett',   position: 'Principal | Rainmaker',               img: '/imgs/avatar_02.jpg', },
   { name: 'Gerardo	Barton',  position: 'President | Bluewater Studios',       img: '/imgs/avatar_03.jpg', },
-  { name: 'Cristina	Bowen',   position: 'Partner | Director Post Production',  img: '/imgs/avatar_04.jpg', },
+  { name: 'Cristina	Bowen',   position: 'Partner | Director Production',  img: '/imgs/avatar_04.jpg', },
   { name: 'Danny	Griffin',   position: 'Creative Director',                   img: '/imgs/avatar_05.jpg', },
   { name: 'Gilbert	Carson',  position: 'Director of Accounts',                img: '/imgs/avatar_06.jpg', },
   { name: 'Rich Domergu',     position: 'Producer | Director',                 img: '/imgs/avatar_07.jpg', },

@@ -8,6 +8,9 @@ var Seed          = require('./seed');
 var Clients = require('./models/clientsModel');
 var Team    = require('./models/teamModel');
 
+// Routes
+var blogRoutes = require('./routes/blogRoutes');
+
 // Ports
 var port = process.env.PORT || 8080;
 var portIP = process.env.IP;
@@ -21,6 +24,8 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 Seed();
+
+
 
 app.get('/', function(req, res) {
   Clients.find({}, function(err, imgs) {
@@ -38,10 +43,12 @@ app.get('/team', function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.render('team', {Member: member}); 
+      res.render('team', {Member: member});
     }
   })
 })
+
+app.use('/', blogRoutes);
 
 app.listen(port, portIP, function() {
   console.log('Server has started and is listening on port ' + port);
