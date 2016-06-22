@@ -2,22 +2,25 @@
 
 <section class="blog-wrapper">
   <div class="blog-display">
-
+    <% blog.forEach(function(blogy) { %>
       <li class="blog-container">
         <div class="blog-image">
-          <img src="http://www.bluewatermedia.tv/wp-content/uploads/2016/02/Clearwater-Aquarium_Hope-and-Winter-750x430.jpg" alt="" />
+          <img src="<%= blogy.image %>" alt="" />
         </div>
 
         <div class="blog-content">
           <header>
             <h3>
-              <a href="#">Blue Studios opens doors to Clearwater Marine Aquarium for online web series</a>
+              <a href="/blog/<%= blogy._id %>"><%= blogy.title %></a>
             </h3>
-            <p>Posted by Blue Studios | February 5th, 2016</p>
+            <p><%= blogy.date %></p>
           </header>
-          <p>CLEARWATER — The forecast was jaw-dropping — an economic impact of $5 billion from the movie “Dolphin Tale,” produced locally and based on the true […]</p>
+          <p><%= blogy.preview %></p>
+          <a href="/blog/<%= blogy._id %>">Read More</a>
         </div>
       </li>
+      <% }) %>
+
 
   </div>
 </section>

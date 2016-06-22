@@ -7,6 +7,7 @@ var Seed          = require('./seed');
 // Models
 var Clients = require('./models/clientsModel');
 var Team    = require('./models/teamModel');
+var Blog    = require('./models/blogModel');
 
 // Routes
 var blogRoutes = require('./routes/blogRoutes');
