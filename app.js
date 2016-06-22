@@ -17,8 +17,8 @@ var port = process.env.PORT || 8080;
 var portIP = process.env.IP;
 
 // Database
-// mongoose.connect('mongodb://localhost/blue_data');
-mongoose.connect('mongodb://retsbud:String33@ds021694.mlab.com:21694/blue_data');
+mongoose.connect('mongodb://localhost/blue_data');
+// mongoose.connect('mongodb://retsbud:String33@ds021694.mlab.com:21694/blue_data');
 
 
 // Settings
@@ -34,7 +34,6 @@ app.get('/', function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      console.log(imgs);
       res.render('index.ejs', {Imgs: imgs});
     }
   })

@@ -30,7 +30,9 @@ gulp.task('scripts', function() {
 
 gulp.task('imgs', function() {
   return gulp.src('./src/imgs/*')
-          .pipe(imagemin())
+          .pipe(imagemin({
+            progressive: true
+          }))
           .pipe(gulp.dest('./public/imgs/'))
 });
 

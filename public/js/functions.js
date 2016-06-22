@@ -16,6 +16,7 @@ $(window).on('scroll', function() {
 
   if (title === 'index') {
     var numbersTop = $('.numbers-wrapper').offset().top - ($(window).height() * 3/4);
+    if (window.innerWidth > 769)
     scrollImage($('.numbers-wrapper'));
   }
 
