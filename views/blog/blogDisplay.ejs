@@ -1,5 +1,29 @@
 <% include ../partials/header %>
 
-<h1><%= theBlog.title %></h1>
+<figure id="article" data-title="blog"></figure>
+
+<section class="blog-wrapper">
+  <div class="blog-display">
+      <li class="blog-container">
+        <div class="blog-image">
+          <img src="<%= theBlog.image %>" alt="" />
+        </div>
+
+        <div class="blog-content">
+          <header>
+            <h3>
+              <a href="#"><%= theBlog.title %></a>
+            </h3>
+            <p><%= theBlog.date %></p>
+          </header>
+          <div class="blog-text">
+            <p><%= theBlog.content %></p>
+          </div>
+        </div>
+      </li>
+
+  </div>
+</section>
+
 
 <% include ../partials/footer %>

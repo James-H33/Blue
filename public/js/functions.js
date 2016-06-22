@@ -2,6 +2,8 @@
 //                Javascript || JQuery
 //**********************************************************
 
+var article = document.getElementById('article');
+var title = article.dataset.title;
 
 //**********************************************************
 //                Event listeners
@@ -11,7 +13,11 @@ $('.menu-btn').on('click', menuActions);
 
 $(window).on('scroll', function() {
   var scrollCheck = $('body').scrollTop();
-  var numbersTop = $('.numbers-wrapper').offset().top - ($(window).height() * 3/4);
+
+  if (title === 'index') {
+    var numbersTop = $('.numbers-wrapper').offset().top - ($(window).height() * 3/4);
+    scrollImage($('.numbers-wrapper'));
+  }
 
   if(scrollCheck >= numbersTop) {
     getBrands();
@@ -24,7 +30,6 @@ $(window).on('scroll', function() {
       'background-position' : '50% ' + (-y * 1/3) +'px'
     })
   }
-  scrollImage($('.numbers-wrapper'));
 
 })
 
@@ -88,16 +93,18 @@ function brandsCounter(bNum, b) {
 })();
 
 function scrollDestination(dest, loc) {
+
   $(dest).on('click', function() {
     $('html, body').animate({
       scrollTop: $(loc).offset().top
     }, 2000);
 
-  if (window.innerWidth < 1000)
-    setTimeout(function() {
-      menuActions();
-    }, 200)
-  })
+    if (window.innerWidth < 1000) {
+      setTimeout(function() {
+        menuActions();
+      }, 200);
+    }
+  });
 }
 
 function menuActions() {
