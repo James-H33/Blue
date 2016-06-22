@@ -112,7 +112,7 @@ function createBlogs() {
 
 
 function seed() {
-  createBlogs();
+  // createBlogs();
   // serve();
   // createTeam();
 }
