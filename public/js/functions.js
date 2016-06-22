@@ -36,6 +36,7 @@ $(window).on('scroll', function() {
 
 scrollDestination('#services', '.services-wrapper');
 scrollDestination('#clients', '.clients-wrapper');
+scrollDestination('#contact', '.contact-wrapper');
 
 
 
