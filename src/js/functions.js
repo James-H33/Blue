@@ -92,7 +92,7 @@ function slideChange() {
   for (var i = 0; i < slides.length; i++) {
     (function(x) {
       setTimeout(function() {
-        slides[x].classList.value = 'active-slide';
+        slides[x].classList.add('active-slide');
         if (x === 3) {
           setTimeout(function() {
             slideChange();
@@ -104,6 +104,7 @@ function slideChange() {
   }
 
 }
+
 
 function scrollDestination(dest, loc) {
 
