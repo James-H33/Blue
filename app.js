@@ -25,9 +25,6 @@ mongoose.connect('mongodb://retsbud:String33@ds021694.mlab.com:21694/blue_data')
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
-Seed();
-
-
 
 app.get('/', function(req, res) {
   Clients.find({}, function(err, imgs) {
