@@ -40,9 +40,14 @@ $(window).on('scroll', function() {
 //                    Call Functions
 //**********************************************************
 
-scrollDestination('#services', '.services-wrapper');
-scrollDestination('#clients', '.clients-wrapper');
-scrollDestination('#contact', '.contact-wrapper');
+$(document).ready(function() {
+  scrollDestination('#services', '.services-wrapper');
+  scrollDestination('#clients', '.clients-wrapper');
+  scrollDestination('#contact', '.contact-wrapper');
+  slideChange();
+})
+
+
 
 
 
@@ -80,10 +85,9 @@ function brandsCounter(bNum, b) {
  }
 }
 
-(function slideChange() {
+function slideChange() {
   var slides = $('.slider-container li');
   var x = 0;
-  slides.removeClass('active-slide');
 
   for (var i = 0; i < slides.length; i++) {
     (function(x) {
@@ -91,14 +95,15 @@ function brandsCounter(bNum, b) {
         slides[x].classList.value = 'active-slide';
         if (x === 3) {
           setTimeout(function() {
-            return slideChange();
+            slideChange();
+            slides.removeClass('active-slide');
           }, 3000)
         }
       }, 3000 * i);
     })(i);
   }
 
-})();
+}
 
 function scrollDestination(dest, loc) {
 
