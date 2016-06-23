@@ -82,15 +82,22 @@ function brandsCounter(bNum, b) {
 
 (function slideChange() {
   var slides = $('.slider-container li');
-  var s = 0;
+  let x = 0;
+  slides.removeClass('active-slide');
 
   for (var i = 0; i < slides.length; i++) {
     (function(x) {
-      setTimeout(function() {
+      setTimeout(() => {
         slides[x].classList.value = 'active-slide';
-      }, 5000 * i);
+        if (x === 3) {
+          setTimeout(() => {
+            return slideChange();
+          }, 3000)
+        }
+      }, 3000 * i);
     })(i);
   }
+
 })();
 
 function scrollDestination(dest, loc) {
