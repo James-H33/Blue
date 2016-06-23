@@ -82,15 +82,15 @@ function brandsCounter(bNum, b) {
 
 (function slideChange() {
   var slides = $('.slider-container li');
-  let x = 0;
+  var x = 0;
   slides.removeClass('active-slide');
 
   for (var i = 0; i < slides.length; i++) {
     (function(x) {
-      setTimeout(() => {
+      setTimeout(function() {
         slides[x].classList.value = 'active-slide';
         if (x === 3) {
-          setTimeout(() => {
+          setTimeout(function() {
             return slideChange();
           }, 3000)
         }
