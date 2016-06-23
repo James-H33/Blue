@@ -97,9 +97,9 @@ function slideChange() {
           setTimeout(function() {
             slideChange();
             slides.removeClass('active-slide');
-          }, 3000)
+          }, 4000)
         }
-      }, 3000 * i);
+      }, 4000 * i);
     })(i);
   }
 
